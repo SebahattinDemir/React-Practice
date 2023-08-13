@@ -1,17 +1,36 @@
 
 import './App.css';
-import Header from './components/Header';
 
-const name = "Ali";
-const surname = "Veli";
+import User from './components/user';
+
+const friends = [
+  {
+    id:1,
+    name: "Ahmet",
+  },
+  {
+    id:2,
+    name:"Elif",
+  },
+  {
+    id:3,
+    name:"John",
+  },
+];
 
 function App(){
   return(
-    <div>
-      <h1>Hello React</h1>
-      <h1>Benim adım {name}, soyadım {surname}</h1>
-      <Header />
-    </div>
+    <>
+      
+      <User 
+      name="Ali" 
+      surname="Veli" 
+      isLoggedIn={true} 
+      age={30} 
+      friends={friends}
+      />
+
+    </>
   )
 }
 
